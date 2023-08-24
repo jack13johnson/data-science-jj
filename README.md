@@ -9,4 +9,9 @@
 <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_Data_Science.jpg">
 
 
+
+[Hot Dog Data Slides](https://docs.google.com/presentation/d/1NqRMQMAv72aPyHXBaLgED3ILcUUIWSH9yOjocukWhSs/edit?usp=sharing)
+
+
+
 Hello
