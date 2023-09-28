@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <button onclick="game('rock')">Rock</button>
+    <button onclick="game('paper')">Paper</button>
+    <button onclick="game('scissors')">Scissors</button>
+    <p id="output"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#container {
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+function game(playerChoice) {
+  const choices = ['rock', 'paper', 'scissors'];
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+  const result = checkWinner(playerChoice, computerChoice);
+
+  document.getElementById('output').textContent = `You chose ${playerChoice}. Computer chose ${computerChoice}. You ${result}!`;
+}
+
+function checkWinner(player, computer) {
+  if (player === computer) return 'tie';
+
+  if (
+    (player === 'rock' && computer === 'scissors') ||
+    (player === 'paper' && computer === 'rock') ||
+    (player === 'scissors' && computer === 'paper')
+  ) {
+    return 'win';
+  } else {
+    return 'lose';
+  }
+}
